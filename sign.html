@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+    <style>
+/* General Reset */
+/* Custom Netflix Font Stack */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+                url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bca1-0746f38e36db/86216524-df39-445a-9407-7ea4d8d3810f/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header / Logo bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 56px;
+    z-index: 10;
+}
+
+.logo {
+    width: 160px;
+}
+
+/* The Sign In button on the Landing page is actually quite small */
+nav .btn-signin {
+    background-color: #e50914;
+    color: white;
+    padding: 7px 17px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.cta-container {
+    text-align: center;
+    margin: auto;
+    max-width: 950px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 3rem; /* Huge and bold */
+    font-weight: 900;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.prompt {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* The Input Stack */
+/* Netflix uses a vertical stack for mobile and a side-by-side for desktop, 
+   but since you have 4 inputs, a clean vertical stack is much sleeker. */
+input {
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 0 15px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Tight spacing */
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* The "Get Started" Button - The centerpiece */
+.btn-get-started {
+    background-color: #e50914;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-weight: 500;
+}
+
+.btn-get-started:hover {
+    background-color: #c11119;
+}
+
+/* Small text footer style */
+p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Fix for those annoying <br> tags in your HTML */
+br {
+    display: none;
+}
+    </style>
+</head>
+<body>
+
+        
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo" alt="Netflix">
+
+
+        <main class="cta-container">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <p class="subtitle">Watch anywhere. Cancel anytime.</p>
+            <p class="prompt">Ready to watch? Enter your username to create or restart your membership.</p>
+
+
+        <input type="text" id="name"  placeholder="Full Name"> <br>
+
+
+        <input type="text" id="username"  placeholder="Username"> <br>
+
+        <input type="email" id="email"  placeholder="Email address"> <br>
+
+        <input type="password" id="password"  placeholder="Password">
+
+    
+    <div id="result" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <button id="sign" onclick="sign()" class="btn-get-started">Register</button>
+    <p>Have an account <a href="login.html">Login</a></p>
+
+    <script src="./sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Account</title>
+    <style>body {
+    background-color: #f3f3f3;
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+.account-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.account-header {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.account-header h1 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.member-since {
+    margin-left: 15px;
+    font-size: 13px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Sections */
+.account-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.section-title h3 {
+    font-size: 18px;
+    color: #737373;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-cancel {
+    margin-top: 15px;
+    background: #e6e6e6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Content Rows */
+.section-content .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.link {
+    color: #0073bb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 740px) {
+    .account-section {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        margin-bottom: 15px;
+    }
+}</style>
+</head>
+<body>
+
+    <main class="account-wrapper">
+
+
+        <section class="account-section">
+            <div class="section-title">
+                <h3>Membership & Billing</h3>
+                <button class="btn-cancel" onclick="delete1()">Cancel Membership</button>
+                <a href="update.html"><button class="btn-cancel">Update</button></a>
+            </div>
+            
+            <div class="section-content">
+                <div class="row" >
+                    <p id="name">name: </p>
+                   
+                </div>
+                <div class="row" >
+                            <p id="username">username: </p>
+                </div>
+                    
+                <hr>
+                <div class="row" >
+                  <p id="email">email: </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="account-section">
+            <div class="section-title">
+                <h3>Plan Details</h3>
+            </div>
+            <div class="section-content">
+                <div class="row" id="plan">
+                  
+                </div>
+                <a href="plan.html"><button class="btn-cancel">change plan</button></a>
+            </div>
+        </section>
+    </main>
+<script src="getProfile.js"></script>
+</body>
+</html>

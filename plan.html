@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Plan Selection</title>
+    <style>
+    :root {
+            --netflix-red: #e50914;
+            --dark-grey: #333;
+            --white: #fff;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: var(--white);
+            color: var(--dark-grey);
+        }
+
+        .pricing-container { max-width: 800px; width: 100%; }
+        .plans-wrapper { display: flex; gap: 15px; margin-bottom: 30px; }
+        .plan-card { flex: 1; position: relative; }
+        .plan-card input[type="radio"] { position: absolute; opacity: 0; }
+        .plan-label {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--netflix-red); color: white; padding: 20px; border-radius: 4px;
+            opacity: 0.6; cursor: pointer; transition: transform 0.2s, opacity 0.2s; font-weight: bold; height: 100px;
+            text-align: center;
+        }
+        .plan-card input[type="radio"]:checked + .plan-label { opacity: 1; transform: scale(1.05); }
+        #submit-plan {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0 auto;
+    padding: 15px 0;
+    background-color: #e50914; /* Netflix Red */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
+}
+
+#submit-plan:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#submit-plan:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+        .next-btn { display: block; width: 300px; margin: 40px auto; padding: 15px; background-color: var(--netflix-red); color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="pricing-container">
+    <header class="pricing-header">
+        <p>STEP 2 OF 3</p>
+        <h1>Choose the plan that's right for you</h1>
+        <h2 id="selected-plan-display">Current Selection: None</h2>
+    </header>
+
+    <div class="plans-wrapper" id="plans-wrapper">
+        <div class="plan-card">
+            <input type="radio" name="plan" id="plan-1" value="1">
+            <label for="plan-1" class="plan-label">Basic</label>
+        </div>
+        <div class="plan-card">
+            <input type="radio" name="plan" id="plan-2" value="2">
+            <label for="plan-2" class="plan-label">Standard</label>
+        </div>
+        <div class="plan-card"> 
+            <input type="radio" name="plan" id="plan-3" value="3">
+            <label for="plan-3" class="plan-label">Premium</label>
+        </div>
+    </div>
+
+
+    <div id="plan-info" style="margin-top:20px; padding:15px; background:#f4f4f4; border-radius:4px; display:none;">
+        <h3 id="plan-name"></h3>
+        <p id="plan-description"></p>
+        <ul id="plan-features"></ul>
+    </div>
+
+</div>
+
+<button id="submit-plan">Continue with Selected Plan</button>
+
+<script src="plan.js"></script>
+</body>
+</html>

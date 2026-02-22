@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Page Styling */
+body {
+    background-color: #000; /* Deep black background */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://assets.nflxext.com/ffe/siteui/vlv3/f8c31b32-901d-48d6-96b4-2115167f2e1d/web/US-en-20230713-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-size: cover;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* The Container Box */
+.register-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 0 20px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background: #454545;
+    outline: none;
+}
+
+/* Red Register Button */
+.btn-get-started {
+    width: 100%;
+    padding: 16px;
+    background-color: #e50914; /* Netflix Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+.btn-get-started:hover {
+    background-color: #c11119;
+}
+
+/* Back Button styling */
+.back-btn {
+    background: transparent;
+    border: 1px solid #737373;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#result {
+    color: #e87c03; /* Warning Orange */
+    font-size: 13px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+<div class="register-card">
+    <a href="adminPanel.html" class="back-btn">Go Back</a>
+    
+    <h1 style="color: white; margin-bottom: 28px;">Register Manager</h1>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email address">
+    <input type="password" id="password" placeholder="Password">
+
+    <div id="result"></div>
+
+    <button id="sign" class="btn-get-started">Register Manager</button>
+</div>
+    <script src="addManager.js"></script>
+</body>
+</html>

@@ -401,6 +401,11 @@ body {
 @media (max-width: 600px) {
     .video-card { width: 100%; }
 }
+#AdminPanel:hover{
+        transform: scale(1.05);
+    border-color: rgb(60, 60, 255);
+    z-index: 5;
+}
     </style>
 </head>
 <body>
@@ -420,6 +425,7 @@ body {
 
         <div class="nav__avatar">
             <a href="getProfile.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile"></a>
+            <a href="adminPanel.html"><button id="AdminPanel" style="width: 5vw;border-radius: 2vw;color: white;background-color: red;    transition: transform 0.2s;" >AdminPanel</button></a>
         </div>
     </nav>
 
@@ -448,7 +454,7 @@ body {
 
     <div id="detail-view" style="display: none;">
         </div>
-
-    <script src="main.js"></script>
+    <script src="adminMain.js"></script>
 </body>
 </html>
+            

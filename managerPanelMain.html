@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
+    <title>Document</title>
     <style>
-/* Base Reset */
+        /* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -401,10 +401,15 @@ body {
 @media (max-width: 600px) {
     .video-card { width: 100%; }
 }
+#ManagerPanel:hover{
+        transform: scale(1.05);
+    border-color: rgb(60, 60, 255);
+    z-index: 5;
+}
     </style>
 </head>
 <body>
-    <nav class="nav" id="mainNav">
+        <nav class="nav" id="mainNav">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="nav__logo" alt="Netflix Logo" onclick="window.location.reload()">
         
         <div class="nav__links">
@@ -420,6 +425,7 @@ body {
 
         <div class="nav__avatar">
             <a href="getProfile.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile"></a>
+            <a href="managerPanel.html"><button id="ManagerPanel" style="width: 5vw;border-radius: 2vw;color: white;background-color: red;    transition: transform 0.2s;" >ManagerPanel</button></a>
         </div>
     </nav>
 
@@ -448,7 +454,6 @@ body {
 
     <div id="detail-view" style="display: none;">
         </div>
-
-    <script src="main.js"></script>
+        <script src="managerPanelMain.js"></script>
 </body>
 </html>
